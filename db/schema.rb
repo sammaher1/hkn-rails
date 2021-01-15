@@ -233,6 +233,7 @@ ActiveRecord::Schema.define(version: 20190428201710) do
     t.datetime "submitted"
     t.string   "contact",    limit: 255
     t.string   "phone",      limit: 255
+    t.text     "background", limit: 65535
     t.text     "comments",   limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"

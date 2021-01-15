@@ -97,6 +97,11 @@
   </div>
 
   <div class="field">
+    <%= label_tag :background, "Tell us a bit about yourself (Where you're from, academic status, etc.):" %>
+    <%= text_area_tag :background, params[:background] %>
+  </div>
+
+  <div class="field">
     <%= label_tag :comments, "Additional comments:" %>
     <%= text_area_tag :comments, params[:comments] %>
   </div>

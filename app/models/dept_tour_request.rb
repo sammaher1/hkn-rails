@@ -8,6 +8,7 @@
 #  submitted  :datetime
 #  contact    :string(255)
 #  phone      :string(255)
+#  background :text
 #  comments   :text
 #  created_at :datetime
 #  updated_at :datetime
