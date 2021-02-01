@@ -11,6 +11,7 @@ class DeptTourController < ApplicationController
       @errors[:phone]              = "Phone must not be blank"          if params[:phone].blank?
 
       # Optional
+      params[:background] ||=''
       params[:comments] ||= ''
 
       if @errors.empty?
@@ -18,7 +19,7 @@ class DeptTourController < ApplicationController
           @messages << params[:date]
           date = "#{params[:date]}"
 
-          mail = DeptTourMailer.dept_tour_email params[:name], date, params[:email], params[:phone], params[:comments]
+          mail = DeptTourMailer.dept_tour_email params[:name], date, params[:email], params[:phone], params[:background], params[:comments]
           mail.deliver
           r = DeptTourRequest.new({
             name:      params[:name],
@@ -26,6 +27,7 @@ class DeptTourController < ApplicationController
             submitted: Time.now,
             contact:   params[:email],
             phone:     params[:phone],
+            background:params[:background],
             comments:  params[:comments],
           })
           unless r.save
