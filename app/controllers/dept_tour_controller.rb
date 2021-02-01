@@ -27,6 +27,8 @@ class DeptTourController < ApplicationController
             submitted: Time.now,
             contact:   params[:email],
             phone:     params[:phone],
+            tour_emphasis: params[:tour_emphasis],
+            bring_guests: params[:bring_guests],
             background:params[:background],
             comments:  params[:comments],
           })

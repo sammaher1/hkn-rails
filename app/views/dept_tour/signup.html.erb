@@ -97,6 +97,16 @@
   </div>
 
   <div class="field">
+    <%= label_tag :tour_emphasis, "Tour Emphasis", class: 'required-field' %>
+    <%= text_field_tag :tour_emphasis, params[:tour_emphasis] %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :bring_guests, "Bringing Guests" %>
+    <%= check_box :bring_guests, params[:bring_guests] %>
+  </div>
+
+  <div class="field">
     <%= label_tag :background, "Tell us a bit about yourself (Where you're from, academic status, etc.):" %>
     <%= text_area_tag :background, params[:background] %>
   </div>

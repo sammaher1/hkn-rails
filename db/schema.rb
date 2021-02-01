@@ -228,13 +228,15 @@ ActiveRecord::Schema.define(version: 20190428201710) do
   end
 
   create_table "dept_tour_requests", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name",          limit: 255
     t.datetime "date"
     t.datetime "submitted"
-    t.string   "contact",    limit: 255
-    t.string   "phone",      limit: 255
-    t.text     "background", limit: 65535
-    t.text     "comments",   limit: 65535
+    t.string   "contact",       limit: 255
+    t.string   "phone",         limit: 255
+    t.string   "tour_emphasis", limit: 255
+    t.boolean  "bring_guests",  default: false
+    t.text     "background",    limit: 65535
+    t.text     "comments",      limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "responded",                default: false
