@@ -98,7 +98,8 @@
 
   <div class="field">
     <%= label_tag :tour_emphasis, "Tour Emphasis", class: 'required-field' %>
-    <%= text_field_tag :tour_emphasis, params[:tour_emphasis] %>
+    <%= f.select :tour_emphasis, options_for_select(['Getting to know the Department Physically', 'Personal Experience', 
+    'Educational Recommendations', 'Hearing about Faculty', 'Getting to know other Prospective Students']), params[:tour_emphasis] %>
   </div>
 
   <div class="field">
