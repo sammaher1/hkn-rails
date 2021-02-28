@@ -24,7 +24,8 @@
     <%= f.text_field :phone %>
     <br/>
     <%= f.label tour_emphasis:, "Tour Emphasis: "%>
-    <%= f.text_field :tour_emphasis %>
+    <%= f.select :tour_emphasis, ['Getting to know the Department Physically', 'Personal Experience', 
+    'Educational Recommendations', 'Hearing about Faculty', 'Getting to know other Prospective Students'] %>
     <br/>
     <%= f.label :bring_guests, "Bringing guests?: "%>
     <%= f.check_box :bring_guests %>
